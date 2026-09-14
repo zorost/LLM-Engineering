@@ -1,0 +1,32 @@
+name: Lab failure
+description: A notebook or check.py step failed
+title: "[lab] "
+labels: ["lab"]
+body:
+  - type: input
+    id: notebook
+    attributes:
+      label: Notebook or script
+      placeholder: notebooks/03_decoding_strategies.ipynb
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: OS and Python
+      placeholder: macOS 15, Python 3.12.4
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command you ran
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback
+      render: shell
+    validations:
+      required: true

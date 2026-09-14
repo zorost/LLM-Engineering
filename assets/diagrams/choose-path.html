@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose a path · LLM Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper: #EEF1F4;
+      --color-ink: #11161D;
+      --color-muted: #5A6672;
+      --color-accent: #FF3621;
+      --font-sans: 'Geist', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', serif;
+      --font-mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1200px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Flowchart · Zorost Intelligence</p>
+    <h1>Retrieval first. Fine-tune for behavior. Agents last.</h1>
+    <svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="choose-path-title choose-path-desc">
+      
+      <title id="choose-path-title">Choose RAG, fine-tune, or agents</title>
+      <desc id="choose-path-desc">Flowchart: start from a measurable task, prefer retrieval, fine-tune only for behavior in weights, add agents only for multi-step tools.</desc>
+      <defs>
+        <pattern id="dots-choose-path" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.9" fill="rgba(17,22,29,0.10)"/>
+        </pattern>
+        <marker id="arrow-choose-path" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#5A6672"/>
+        </marker>
+        <marker id="arrow-accent-choose-path" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#FF3621"/>
+        </marker>
+        <marker id="arrow-link-choose-path" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#0A7F7A"/>
+        </marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#EEF1F4"/>
+      <rect width="100%" height="100%" fill="url(#dots-choose-path)" opacity="0.55"/>
+
+      <line x1="500" y1="68" x2="500" y2="96" stroke="#5A6672" stroke-width="1.2" marker-end="url(#arrow-choose-path)"/>
+      <line x1="500" y1="176" x2="500" y2="204" stroke="#5A6672" stroke-width="1.2" marker-end="url(#arrow-choose-path)"/>
+      <line x1="500" y1="204" x2="500" y2="204"/>
+      <path d="M 500,256 L 720,256 Q 728,256 728,264 L 728,300" fill="none" stroke="#5A6672" stroke-width="1.2" marker-end="url(#arrow-choose-path)"/>
+      <path d="M 500,256 L 280,256 Q 272,256 272,264 L 272,300" fill="none" stroke="#FF3621" stroke-width="1.2" marker-end="url(#arrow-accent-choose-path)"/>
+      <rect x="508" y="240" width="28" height="12" rx="2" fill="#EEF1F4"/>
+      <text x="522" y="250" fill="#8A939C" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">NO</text>
+      <rect x="360" y="240" width="36" height="12" rx="2" fill="#EEF1F4"/>
+      <text x="378" y="250" fill="#FF3621" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">YES</text>
+      <line x1="272" y1="364" x2="272" y2="400" stroke="#FF3621" stroke-width="1.2" marker-end="url(#arrow-accent-choose-path)"/>
+      <line x1="728" y1="364" x2="728" y2="400" stroke="#5A6672" stroke-width="1.2" marker-end="url(#arrow-choose-path)"/>
+      <path d="M 728,464 L 728,500 Q 728,508 720,508 L 500,508 Q 492,508 492,516 L 492,536" fill="none" stroke="#5A6672" stroke-width="1.2" marker-end="url(#arrow-choose-path)"/>
+      <path d="M 272,464 L 272,500 Q 272,508 280,508 L 492,508" fill="none" stroke="#5A6672" stroke-width="1.2"/>
+      <rect x="160" y="24" width="680" height="44" rx="20" fill="#FFFFFF" stroke="#11161D"/>
+      <text x="500" y="52" fill="#11161D" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Start with a task you can score</text>
+      <rect x="380" y="100" width="240" height="76" rx="6" fill="#EEF1F4"/>
+<rect x="380" y="100" width="240" height="76" rx="6" fill="#FFFFFF" stroke="#11161D" stroke-width="1"/>
+<rect x="388" y="106" width="36" height="12" rx="2" fill="transparent" stroke="#11161D" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="406.0" y="115" fill="#11161D" fill-opacity="0.8" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">Q1</text>
+<text x="500.0" y="132" fill="#11161D" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Is the knowledge already</text>
+<text x="500.0" y="148" fill="#5A6672" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">in a corpus you can index?</text>
+      <rect x="160" y="304" width="224" height="60" rx="6" fill="#EEF1F4"/>
+<rect x="160" y="304" width="224" height="60" rx="6" fill="rgba(255,54,33,0.08)" stroke="#FF3621" stroke-width="1"/>
+<rect x="168" y="310" width="36" height="12" rx="2" fill="transparent" stroke="#FF3621" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="186.0" y="319" fill="#FF3621" fill-opacity="0.8" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">RAG</text>
+<text x="272.0" y="336" fill="#11161D" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">RAG plus tools</text>
+<text x="272.0" y="352" fill="#5A6672" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Engineer E2 to E4</text>
+      <rect x="616" y="304" width="224" height="60" rx="6" fill="#EEF1F4"/>
+<rect x="616" y="304" width="224" height="60" rx="6" fill="#FFFFFF" stroke="#11161D" stroke-width="1"/>
+<rect x="624" y="310" width="36" height="12" rx="2" fill="transparent" stroke="#11161D" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="642.0" y="319" fill="#11161D" fill-opacity="0.8" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">SFT</text>
+<text x="728.0" y="336" fill="#11161D" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Fine-tune the behavior</text>
+<text x="728.0" y="352" fill="#5A6672" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Scientist S4 to S5</text>
+      <rect x="380" y="400" width="240" height="64" rx="6" fill="#EEF1F4"/>
+<rect x="380" y="400" width="240" height="64" rx="6" fill="#FFFFFF" stroke="#11161D" stroke-width="1"/>
+<rect x="388" y="406" width="36" height="12" rx="2" fill="transparent" stroke="#11161D" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="406.0" y="415" fill="#11161D" fill-opacity="0.8" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">Q2</text>
+<text x="500.0" y="432" fill="#11161D" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Need multi-step tools</text>
+<text x="500.0" y="448" fill="#5A6672" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">or a long-running loop?</text>
+      <rect x="380" y="540" width="240" height="56" rx="6" fill="#EEF1F4"/>
+<rect x="380" y="540" width="240" height="56" rx="6" fill="#FFFFFF" stroke="#11161D" stroke-width="1"/>
+<rect x="388" y="546" width="36" height="12" rx="2" fill="transparent" stroke="#11161D" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="406.0" y="555" fill="#11161D" fill-opacity="0.8" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">END</text>
+<text x="500.0" y="572" fill="#11161D" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Add an agent later</text>
+<text x="500.0" y="588" fill="#5A6672" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">never as step one</text>
+      <line x1="32" y1="612" x2="968" y2="612" stroke="rgba(17,22,29,0.10)" stroke-width="0.8"/>
+<text x="32" y="632" fill="#5A6672" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.14em">LEGEND</text>
+<rect x="120" y="622" width="12" height="12" rx="2" fill="rgba(255,54,33,0.08)" stroke="#FF3621"/>
+<text x="140" y="632" fill="#5A6672" font-size="8" font-family="'Geist Mono', monospace">Prefer this first</text>
+<rect x="280" y="622" width="12" height="12" rx="2" fill="#FFFFFF" stroke="#11161D"/>
+<text x="300" y="632" fill="#5A6672" font-size="8" font-family="'Geist Mono', monospace">Later move</text>
+    </svg>
+  </div>
+</body>
+</html>

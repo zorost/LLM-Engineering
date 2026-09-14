@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: LLM Engineering
+message: If you use this course, please cite it.
+type: software
+license: MIT
+repository-code: https://github.com/zorost/LLM-Engineering
+url: https://zorost.com/ai-lab
+authors:
+  - name: Zorost Intelligence AI Lab
+    website: https://zorost.com
+    email: info@zorost.com
+    city: Washington
+    region: DC
+    country: US
+abstract: >-
+  A free, open LLM engineering course covering fundamentals, model science,
+  application engineering, operations, and leadership, with original diagrams
+  and CPU-first labs. Developed by Zorost Intelligence AI Lab.
+keywords:
+  - large language models
+  - LLM engineering
+  - fine-tuning
+  - retrieval augmented generation
+  - agents
+  - evaluation
+  - quantization
+preferred-citation:
+  type: generic
+  title: "LLM Engineering"
+  authors:
+    - name: Zorost Intelligence AI Lab
+  year: 2026
+  url: https://github.com/zorost/LLM-Engineering
+  publisher:
+    name: Zorost Intelligence LLC

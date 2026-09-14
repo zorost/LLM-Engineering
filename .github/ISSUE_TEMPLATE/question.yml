@@ -1,0 +1,37 @@
+name: Question
+description: Ask about a module, lab, or missing concept
+title: "[module] "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      options:
+        - Fundamentals
+        - Scientist
+        - Engineer
+        - Operator
+        - Leader
+        - Tutorials
+        - Repository
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: File path
+      placeholder: tracks/01-scientist/04-supervised-fine-tuning.md
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What is unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What did you already try?
+      placeholder: The glossary, the lab, the linked lecture
