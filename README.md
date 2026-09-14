@@ -1,15 +1,25 @@
 # LLM Engineering
 
+<p align="center">
+  <img src="img/banner.png" alt="LLM Engineering: a free LLM course and LLM roadmap by Zorost Intelligence AI Lab. Fundamentals, scientist, engineer, operator, leader." width="100%">
+</p>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-F14B21.svg)](LICENSE)
 [![Tracks](https://img.shields.io/badge/tracks-5-14213D.svg)](tracks/)
 [![Labs](https://img.shields.io/badge/labs-20%20CPU--first-0E9384.svg)](notebooks/)
 [![Lab](https://img.shields.io/badge/companion-AI%20Engineering%20Lab-4260E8.svg)](https://github.com/zorost/AI-Engineering-Lab)
+[![GitHub stars](https://img.shields.io/github/stars/zorost/LLM-Engineering?style=flat)](https://github.com/zorost/LLM-Engineering/stargazers)
+
+**LLM course** · **LLM roadmap** · large language models · fine-tuning · RAG · agents · quantization · evaluation · serving
 
 **[Start here](START-HERE.md)** ·
-[How to choose a path](#pick-a-door) ·
-[Five tracks](#the-five-tracks) ·
+[Fundamentals](#llm-fundamentals) ·
+[Scientist](#the-llm-scientist) ·
+[Engineer](#the-llm-engineer) ·
+[Operator](#the-llm-operator) ·
+[Leader](#the-llm-leader) ·
 [Labs](notebooks/README.md) ·
-[YouTube and courses](reference/YOUTUBE.md) ·
+[YouTube](reference/YOUTUBE.md) ·
 [Glossary](reference/GLOSSARY.md) ·
 [Why this exists](docs/ASSESSMENT.md)
 
@@ -20,21 +30,20 @@ Training 02 on [zorost.com/ai-lab](https://zorost.com/ai-lab)
 
 ## What this is
 
-**LLM Engineering** is a free, open course that teaches the full job of working
-with large language models: how they are built, how they are adapted, how they
-are shipped, how they are operated, and how a technical leader decides what to
-fund. It is original writing, original diagrams, and original CPU-first labs
-from [Zorost Intelligence AI Lab](https://zorost.com/ai-lab).
+**LLM Engineering** is a free, original **LLM course** and **LLM roadmap** for
+people who work with large language models. It teaches how models are built,
+how they are adapted (fine-tuning, LoRA, DPO), how products use them (RAG,
+agents, structured output), how they are served, and how a technical leader
+decides what to fund.
+
+It is original writing, original hub-and-leaf roadmaps, and original CPU-first
+labs from [Zorost Intelligence AI Lab](https://zorost.com/ai-lab). MIT licensed.
+No signup. The required labs run on a laptop CPU with no API key.
 
 It sits next to [AI Engineering Lab](https://github.com/zorost/AI-Engineering-Lab)
 (Training 01), which takes a beginner from Python to a governed production
 lakehouse in 24 weeks. This repository is the specialist map of the LLM field
-itself. Read that program if you need the weekly cadence and the freight case
-study. Read this one if you need depth on tokens, training, alignment,
-retrieval, agents, serving, cost, security, and the decisions around them.
-
-There is no signup. MIT licensed. The required labs run on a laptop CPU with
-no API key.
+itself.
 
 > The job is not "know the names of papers." The job is to choose a path,
 > measure the result, and know why the other path would have failed.
@@ -65,29 +74,21 @@ python3 scripts/check.py
 ```
 
 Then open [START-HERE.md](START-HERE.md). If you already write Python and have
-trained a network, skip to the track table and take the Scientist or Engineer
-door.
+trained a network, skip to the track that matches your job.
 
-## The five tracks
+---
 
-![Layered view of LLM work from silicon to the boardroom](assets/diagrams/llm-layers.png)
-
-Every concept in the public LLM-course tradition is here: mathematics, Python,
-networks, classical NLP, architecture, pre-training, post-training data,
-supervised fine-tuning, preference alignment, evaluation, quantization,
-merging, multimodality, interpretability, test-time compute, APIs and local
-runtimes, prompt engineering, structured output, vector stores, RAG, advanced
-RAG, agents, inference optimization, deployment, and security.
-
-The modules below also cover the gaps that list usually leaves: tokenizer
-design, long context, mixture of experts, state-space hybrids, reasoning
-models, distillation and speculative decoding, licenses and contamination,
-context engineering, MCP and A2A, production evals, cost, observability,
-governance, and the leadership decisions that make the rest of it worth doing.
-
-### 0 · Fundamentals (optional, but not skippable if you are guessing)
+## LLM fundamentals
 
 [Track README](tracks/00-fundamentals/README.md)
+
+The vocabulary under every later sentence. Five hubs. Hub 05 is the hardware
+sitting public LLM courses usually omit: scaling laws, VRAM, KV cache, MoE,
+token cost.
+
+<p align="center">
+  <img src="img/roadmap_fundamentals.png" alt="LLM fundamentals roadmap: mathematics, Python, neural networks, NLP to LLMs, scaling and hardware" width="720">
+</p>
 
 | # | Module | What you can do after it |
 |---|---|---|
@@ -97,13 +98,24 @@ governance, and the leadership decisions that make the rest of it worth doing.
 | F4 | [NLP before transformers](tracks/00-fundamentals/04-nlp-before-transformers.md) | Explain why bag-of-words dies on meaning, and what embeddings fixed |
 | F5 | [Scaling, information, hardware](tracks/00-fundamentals/05-scaling-and-hardware.md) | Estimate tokens, FLOPs, and VRAM before you buy a box |
 
-### 1 · The LLM scientist
+---
+
+## The LLM scientist
 
 [Track README](tracks/01-scientist/README.md) ·
 [Pipeline diagram](assets/diagrams/scientist-pipeline.png)
 
-How capable models are made. You do not need a GPU cluster to understand this
-track. You do need it if you intend to reproduce frontier pre-training.
+How capable models are made: architecture, pre-training, post-training data,
+supervised fine-tuning, preference alignment, evaluation, quantization. Nine
+hubs. Reasoning, distillation, and licenses are first-class modules, not a
+single "new trends" column.
+
+You do not need a GPU cluster to understand this track. You do need one if
+you intend to reproduce frontier pre-training.
+
+<p align="center">
+  <img src="img/roadmap_scientist.png" alt="LLM scientist roadmap: architecture, pre-training, SFT, alignment, evaluation, quantization, merging, reasoning, licenses" width="720">
+</p>
 
 | # | Module | What you can do after it |
 |---|---|---|
@@ -120,13 +132,20 @@ track. You do need it if you intend to reproduce frontier pre-training.
 | S11 | [Licenses, contamination, data law](tracks/01-scientist/11-licenses-and-contamination.md) | Read a model card and a dataset card before you ship |
 | S12 | [Interpretability and editing](tracks/01-scientist/12-interpretability.md) | Know what SAEs and activation steering can and cannot claim |
 
-### 2 · The LLM engineer
+---
+
+## The LLM engineer
 
 [Track README](tracks/02-engineer/README.md) ·
 [Stack diagram](assets/diagrams/engineer-stack.png)
 
 How applications that *use* models are built. This is the default working path
-for most readers of this course.
+for most readers of this LLM course. Retrieval before agents. Security and
+evals before the demo.
+
+<p align="center">
+  <img src="img/roadmap_engineer.png" alt="LLM engineer roadmap: running LLMs, vector storage, RAG, advanced RAG, agents, inference, deployment, security, production" width="720">
+</p>
 
 | # | Module | What you can do after it |
 |---|---|---|
@@ -143,9 +162,21 @@ for most readers of this course.
 | E11 | [Memory and conversation](tracks/02-engineer/11-memory.md) | Buffer, summarize, retrieve; know when each lies |
 | E12 | [Platforms](tracks/02-engineer/12-platforms.md) | Azure, Vertex, Bedrock, Databricks, and open gateways |
 
-### 3 · The LLM operator (the usual missing track)
+![Retrieval first, fine-tune for behavior, agents last](assets/diagrams/choose-path.png)
+
+---
+
+## The LLM operator
 
 [Track README](tracks/03-operator/README.md)
+
+The track most public LLM roadmaps skip. The scientist trains. The engineer
+ships a product. Someone still has to keep a model answering under a latency
+budget, on a GPU bill that finance can defend.
+
+<p align="center">
+  <img src="img/roadmap_operator.png" alt="LLM operator roadmap: serving engines, reliability, cost and capacity, observability" width="720">
+</p>
 
 | # | Module | What you can do after it |
 |---|---|---|
@@ -154,13 +185,20 @@ for most readers of this course.
 | O3 | [Cost and capacity](tracks/03-operator/03-cost-and-capacity.md) | Tokens, QPS, VRAM, and the bill |
 | O4 | [Observability](tracks/03-operator/04-observability.md) | Traces, eval samples, and privacy-safe logs |
 
-### 4 · The LLM leader
+---
+
+## The LLM leader
 
 [Track README](tracks/04-leader/README.md)
 
-This track is the reason the course is a Zorost program rather than a notebook
-zoo. It is written against the two textbooks and against the work the Lab
-already ships.
+For people who allocate money, risk, and attention. Written against
+[The AI Leadership Textbook](https://www.amazon.com/dp/B0HHTJHK5R) and
+[AI Engineering Distilled](https://www.amazon.com/dp/B0HHZM4QQS)
+([author page](https://www.amazon.com/stores/Fereydun-Hashemipour/author/B0HHVZ1929)).
+
+<p align="center">
+  <img src="img/roadmap_leader.png" alt="LLM leader roadmap: buy build retrieve or fine-tune, teams, risk and governance, portfolio" width="720">
+</p>
 
 | # | Module | What you can do after it |
 |---|---|---|
@@ -168,6 +206,24 @@ already ships.
 | L2 | [Teams and skills](tracks/04-leader/02-teams-and-skills.md) | Staff an LLM effort without cloning a research lab |
 | L3 | [Risk and governance](tracks/04-leader/03-risk-and-governance.md) | Map NIST AI RMF and the EU AI Act onto a real system |
 | L4 | [Portfolio and product](tracks/04-leader/04-portfolio.md) | Kill a demo that will never become a product |
+
+---
+
+## How to read a roadmap
+
+Each poster is a **spine of numbered hubs**. A hub is a module family. The
+boxes on the opposite side are **leaves**: topics inside that hub, not extra
+courses. The lava hub is the sitting people skip or start too late.
+
+HTML sources live in [`assets/diagrams/`](assets/diagrams/). The README copies
+live in [`img/`](img/). Original Zorost artwork. Orthogonal connectors, PAPERG
+paper, INK type, LAVA accent. We kept the *coverage shape* of the public
+LLM-course tradition (fundamentals, scientist, engineer) and rewrote the
+pictures. [How the posters were designed](docs/ROADMAPS.md).
+
+![Layered view of LLM work from silicon to the boardroom](assets/diagrams/llm-layers.png)
+
+---
 
 ## Labs
 
@@ -249,12 +305,13 @@ do not copy: [reference/COURSES.md](reference/COURSES.md).
 ```
 LLM-Engineering/
 ├── START-HERE.md          # day one: install, order, when it breaks
+├── img/                   # README posters: banner + five roadmaps
 ├── tracks/                # the five tracks, one idea per file
 ├── tutorials/             # how each lab type is supposed to feel
 ├── notebooks/             # 20 CPU-first labs
 ├── reference/             # glossary, books, YouTube, papers, tools
 ├── assets/diagrams/       # Zorost diagrams (HTML source + PNG)
-├── docs/                  # assessment of the field, study plans
+├── docs/                  # assessment of the field, study plans, roadmaps
 ├── scripts/               # check.py and diagram export
 └── .github/               # conduct, security, issues, CI
 ```
@@ -264,9 +321,9 @@ LLM-Engineering/
 The field already has a well-known public roadmap tradition. We read it,
 including Maxime Labonne's widely used [llm-course](https://github.com/mlabonne/llm-course),
 end to end. We kept the *coverage* (fundamentals, scientist, engineer) and
-rewrote every explanation. We added the modules that 2024 to 2026 made
-non-optional, we added an operator track and a leader track, and we added
-labs you can run without a rented GPU.
+rewrote every explanation and every picture. We added the modules that 2024
+to 2026 made non-optional, we added an operator track and a leader track, and
+we added labs you can run without a rented GPU.
 
 We do not reproduce third-party course text, notebooks, or artwork. Citations
 point at the original. The assessment of what was missing is
@@ -283,9 +340,9 @@ can change a label without redrawing from memory.
 3. Open a GitHub issue with the file path, what you ran, and the traceback.
 4. Write **info@zorost.com** for security or conduct.
 
-See [contributing](.github/CONTRIBUTING.md),
-[code of conduct](.github/CODE_OF_CONDUCT.md), and
-[security](.github/SECURITY.md).
+See [contributing](CONTRIBUTING.md),
+[code of conduct](CODE_OF_CONDUCT.md), and
+[security](SECURITY.md).
 
 ## About Zorost Intelligence AI Lab
 

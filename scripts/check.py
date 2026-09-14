@@ -24,6 +24,12 @@ REQUIRED = [
     "tracks/03-operator/README.md",
     "tracks/04-leader/README.md",
     "assets/diagrams/course-map.png",
+    "img/banner.png",
+    "img/roadmap_fundamentals.png",
+    "img/roadmap_scientist.png",
+    "img/roadmap_engineer.png",
+    "img/roadmap_operator.png",
+    "img/roadmap_leader.png",
 ]
 
 def fail(msg: str) -> None:

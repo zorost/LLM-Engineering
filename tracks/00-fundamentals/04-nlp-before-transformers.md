@@ -35,6 +35,32 @@ self-attention, which is the point of the 2017 Transformer paper.
 
 colah's LSTM post remains the clearest picture of the gates.
 
+### Attention (the bridge)
+
+Self-attention lets every token look at every other token in the window.
+That is the move that retired recurrence as the default backbone. You
+meet the formula in lab 02 and the full wiring in S1. Here you only need
+the claim: **order is in the computation, not in a hidden state that
+forgets**. 3Blue1Brown's transformer video is the picture. Jay Alammar's
+illustrated transformer is the labeled diagram.
+
+### Transformer stack
+
+A decoder-only block is: attention, residual, norm, MLP, residual, norm
+(the exact order varies: Pre-LN vs Post-LN). Stack those blocks, add a
+token embedding and an unembedding, and you have the object later modules
+call "the model." Residual streams and RMSNorm are named in F3 so they
+are not a surprise in S1.
+
+### LLM families
+
+Once the stack exists, products differ by **data, scale, and post-training**,
+not by a new animal each month. Dense decoder-only, mixture of experts,
+vision-language wrappers, and a handful of state-space hybrids are the
+families you will actually meet. S1 names them. F5 and lab 17 tell you
+why MoE changes the serving bill. Do not collect a zoo of logos. Collect
+a way to read a model card.
+
 ## The gap most roadmaps leave
 
 They mention Word2Vec and skip **the production leftover**:

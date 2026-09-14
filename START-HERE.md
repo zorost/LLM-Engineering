@@ -33,7 +33,9 @@ Use Python 3.11 or 3.12. 3.10 usually works. 3.9 is unsupported.
 | I decide budget, risk, or hiring | [Leader](tracks/04-leader/README.md) | no lab required; read L1 to L4, then the textbooks |
 
 The [README decision table](README.md#pick-a-door) is the same advice in
-shorter form.
+shorter form. The tall posters in [`img/`](img/) are the map: one spine
+per track, leaves for topics inside each hub. How to read them:
+[docs/ROADMAPS.md](docs/ROADMAPS.md).
 
 ## 3. How a module works
 

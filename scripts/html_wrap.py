@@ -78,6 +78,29 @@ def page(title: str, eyebrow: str, h1: str, svg: str) -> str:
 """
 
 
+def write_poster_html(path, title: str, svg: str) -> None:
+    """Full-bleed SVG page so README PNG export matches the poster exactly."""
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link href="{FONTS}" rel="stylesheet">
+  <style>
+    *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    html, body {{ background: {PAPER}; }}
+    svg {{ display: block; }}
+  </style>
+</head>
+<body>
+  {svg}
+</body>
+</html>
+"""
+    path.write_text(html, encoding="utf-8")
+
+
 def defs(slug: str, title: str, desc: str) -> str:
     return f"""
       <title id="{slug}-title">{title}</title>

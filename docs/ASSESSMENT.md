@@ -76,6 +76,10 @@ Other honest limits of the hub genre, which we tried not to repeat:
 ## What we deliberately did not copy
 
 - Roadmap artwork, README wording, and notebook tables from any third party.
+  The hub-and-leaf posters in `img/` are original Zorost drawings of the
+  same *coverage shape* (numbered hubs, leaf topics). Orthogonal spine,
+  house color, extra hubs for operator, leader, reasoning, and licenses.
+  See [ROADMAPS.md](ROADMAPS.md).
 - Vendor collabs that exist to sell a cloud.
 - Internal Zorost serving recipes, private models, or client data.
 - Exploit code. Security is written as tests and controls.

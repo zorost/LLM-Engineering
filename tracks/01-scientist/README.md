@@ -20,6 +20,16 @@ If [Fundamentals](../00-fundamentals/README.md) still has unanswered
 knowledge checks, finish those first. If you skip F5, S2 and S7 will
 feel like shopping.
 
+<p align="center">
+  <img src="../../img/roadmap_scientist.png" alt="LLM scientist roadmap: architecture through reasoning, distillation, and licenses" width="720">
+</p>
+
+Nine hubs. Hubs 08 and 09 are the expansion past a single "new trends"
+column: merge and multimodal stay together; reasoning, distillation, and
+licenses get their own hub and their own modules (S9 to S12). The lava
+hub is evaluation. If you cannot measure the model, you cannot claim the
+fine-tune worked.
+
 ## Who this track is for
 
 - You will fine-tune, merge, quantize, or evaluate open weights.
@@ -71,6 +81,20 @@ the [Operator](../03-operator/README.md) track.
 S8 is merging and multimodal. Reasoning is S9. Distillation is S10.
 Interpretability is S12. Do not treat those four as one "new trends"
 bucket.
+
+## Leaves on the poster
+
+| Hub | Leaves | Module |
+|---|---|---|
+| 01 Architecture | Tokenization, attention, MLP/FFN, positional encodings, KV cache and GQA | S1 |
+| 02 Pre-training | Data, parallelism, scaling laws, compute, checkpoints, mid-training | S2 |
+| 03 Post-training data | Chat templates, instruction sets, synthetic data, preference pairs, filters, contamination | S3 |
+| 04 Fine-tuning (SFT) | Full vs LoRA, packing, chat SFT, adapters, Unsloth/TRL, merge adapters | S4 |
+| 05 Alignment | Reward models, DPO/ORPO, PPO, GRPO, RLAIF, over-refusal | S5 |
+| 06 Evaluation | Harnesses, task evals, leaderboards, arena, contamination, human review | S6 |
+| 07 Quantization | GGUF, AWQ, GPTQ, bitsandbytes, calibration, quality drop | S7 |
+| 08 Merge · multimodal | Weight merging, MoE merge, vision-language, audio/video, interpretability | S8, S12 |
+| 09 Reasoning and licenses | Chain of thought, test-time compute, distillation, speculative decode, licenses, model cards | S9, S10, S11 |
 
 Twelve sittings for this track: [docs/STUDY-PLANS.md](../../docs/STUDY-PLANS.md),
 Plan B.

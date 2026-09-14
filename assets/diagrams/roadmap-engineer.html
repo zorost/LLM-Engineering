@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM engineer roadmap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #EEF1F4; }
+    svg { display: block; }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 2968" width="960" height="2968" role="img" aria-labelledby="the-llm-engineer-title the-llm-engineer-desc"><title id="the-llm-engineer-title">The LLM engineer</title>
+<desc id="the-llm-engineer-desc">How applications use models. Retrieval before agents. Security and evals before the demo.</desc>
+<rect width="960" height="2968" fill="#EEF1F4"/>
+<text x="40" y="36" fill="#5A6672" font-family="'Geist Mono', ui-monospace, monospace" font-size="8" font-weight="500" text-anchor="start">ZOROST INTELLIGENCE  ·  LLM ENGINEERING  ·  TRAINING 02</text>
+<text x="40" y="72" fill="#11161D" font-family="'Instrument Serif', Georgia, serif" font-size="28" font-weight="400" text-anchor="start">The LLM engineer</text>
+<text x="40" y="100" fill="#5A6672" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">How applications use models. Retrieval before agents. Security and evals before the demo.</text>
+<text x="920" y="36" fill="#5A6672" font-family="'Geist Mono', ui-monospace, monospace" font-size="8" font-weight="500" text-anchor="end">zorost.com/ai-lab</text>
+<rect x="40" y="248" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="52" y="268" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="66" y="286" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">01</text>
+<text x="92" y="288" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Running LLMs</text>
+<line x1="320" y1="280" x2="480" y2="280" stroke="#11161D" stroke-width="1.5"/>
+<rect x="688" y="128" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="154" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Hosted APIs</text>
+<line x1="688" y1="148" x2="480" y2="148" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="180" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="206" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">llama.cpp</text>
+<line x1="688" y1="200" x2="480" y2="200" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="232" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="258" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">vLLM / SGLang</text>
+<line x1="688" y1="252" x2="480" y2="252" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="284" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="310" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Ollama</text>
+<line x1="688" y1="304" x2="480" y2="304" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="336" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="362" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Chat templates</text>
+<line x1="688" y1="356" x2="480" y2="356" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="388" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="414" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Local vs hosted</text>
+<line x1="688" y1="408" x2="480" y2="408" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="640" y="568" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="652" y="588" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="666" y="606" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">02</text>
+<text x="692" y="608" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Vector storage</text>
+<line x1="640" y1="600" x2="480" y2="600" stroke="#11161D" stroke-width="1.5"/>
+<rect x="40" y="476" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="502" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Embeddings</text>
+<line x1="272" y1="496" x2="480" y2="496" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="528" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="554" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">ANN indexes</text>
+<line x1="272" y1="548" x2="480" y2="548" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="580" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="606" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Chunking</text>
+<line x1="272" y1="600" x2="480" y2="600" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="632" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="658" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Metadata filters</text>
+<line x1="272" y1="652" x2="480" y2="652" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="684" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="710" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Hybrid search</text>
+<line x1="272" y1="704" x2="480" y2="704" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="888" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#FF3621" stroke-width="2"/>
+<rect x="52" y="908" width="28" height="24" rx="4" fill="#FF3621" stroke="#FF3621" stroke-width="0"/>
+<text x="66" y="926" fill="#FFFFFF" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">03</text>
+<text x="92" y="928" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Retrieval (RAG)</text>
+<line x1="320" y1="920" x2="480" y2="920" stroke="#FF3621" stroke-width="1.5"/>
+<rect x="688" y="772" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="798" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Index</text>
+<line x1="688" y1="792" x2="480" y2="792" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="824" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="850" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Retrieve</text>
+<line x1="688" y1="844" x2="480" y2="844" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="876" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="902" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Augment</text>
+<line x1="688" y1="896" x2="480" y2="896" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="928" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="954" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Generate</text>
+<line x1="688" y1="948" x2="480" y2="948" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="980" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1006" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Citations</text>
+<line x1="688" y1="1000" x2="480" y2="1000" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="1032" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1058" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">When not to RAG</text>
+<line x1="688" y1="1052" x2="480" y2="1052" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="640" y="1212" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="652" y="1232" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="666" y="1250" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">04</text>
+<text x="692" y="1252" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Advanced RAG</text>
+<line x1="640" y1="1244" x2="480" y2="1244" stroke="#11161D" stroke-width="1.5"/>
+<rect x="40" y="1120" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1146" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Query rewrite</text>
+<line x1="272" y1="1140" x2="480" y2="1140" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1172" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1198" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Rerankers</text>
+<line x1="272" y1="1192" x2="480" y2="1192" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1224" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1250" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Graph RAG</text>
+<line x1="272" y1="1244" x2="480" y2="1244" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1276" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1302" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Agentic RAG</text>
+<line x1="272" y1="1296" x2="480" y2="1296" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1328" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1354" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">RAG evals</text>
+<line x1="272" y1="1348" x2="480" y2="1348" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1536" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="52" y="1556" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="66" y="1574" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">05</text>
+<text x="92" y="1576" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Agents</text>
+<line x1="320" y1="1568" x2="480" y2="1568" stroke="#11161D" stroke-width="1.5"/>
+<rect x="688" y="1416" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1442" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">ReAct loop</text>
+<line x1="688" y1="1436" x2="480" y2="1436" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="1468" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1494" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Tools</text>
+<line x1="688" y1="1488" x2="480" y2="1488" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="1520" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1546" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Planner</text>
+<line x1="688" y1="1540" x2="480" y2="1540" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="1572" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1598" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Multi-agent</text>
+<line x1="688" y1="1592" x2="480" y2="1592" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="1624" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1650" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Memory</text>
+<line x1="688" y1="1644" x2="480" y2="1644" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="1676" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="1702" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Guards</text>
+<line x1="688" y1="1696" x2="480" y2="1696" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="640" y="1856" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="652" y="1876" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="666" y="1894" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">06</text>
+<text x="692" y="1896" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Inference optimization</text>
+<line x1="640" y1="1888" x2="480" y2="1888" stroke="#11161D" stroke-width="1.5"/>
+<rect x="40" y="1764" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1790" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Batching</text>
+<line x1="272" y1="1784" x2="480" y2="1784" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1816" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1842" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">KV cache</text>
+<line x1="272" y1="1836" x2="480" y2="1836" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1868" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1894" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Speculative</text>
+<line x1="272" y1="1888" x2="480" y2="1888" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1920" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1946" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Quantized serve</text>
+<line x1="272" y1="1940" x2="480" y2="1940" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="1972" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="1998" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Prefix cache</text>
+<line x1="272" y1="1992" x2="480" y2="1992" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="2152" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="52" y="2172" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="66" y="2190" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">07</text>
+<text x="92" y="2192" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Deployment</text>
+<line x1="320" y1="2184" x2="480" y2="2184" stroke="#11161D" stroke-width="1.5"/>
+<rect x="688" y="2060" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2086" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">OpenAI-compatible</text>
+<line x1="688" y1="2080" x2="480" y2="2080" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2112" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2138" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Containers</text>
+<line x1="688" y1="2132" x2="480" y2="2132" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2164" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2190" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Autoscaling</text>
+<line x1="688" y1="2184" x2="480" y2="2184" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2216" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2242" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Gateways</text>
+<line x1="688" y1="2236" x2="480" y2="2236" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2268" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2294" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">SLOs</text>
+<line x1="688" y1="2288" x2="480" y2="2288" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="640" y="2448" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="652" y="2468" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="666" y="2486" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">08</text>
+<text x="692" y="2488" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Security</text>
+<line x1="640" y1="2480" x2="480" y2="2480" stroke="#11161D" stroke-width="1.5"/>
+<rect x="40" y="2356" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="2382" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Prompt injection</text>
+<line x1="272" y1="2376" x2="480" y2="2376" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="2408" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="2434" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Data leaks</text>
+<line x1="272" y1="2428" x2="480" y2="2428" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="2460" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="2486" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Supply chain</text>
+<line x1="272" y1="2480" x2="480" y2="2480" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="2512" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="2538" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Red team</text>
+<line x1="272" y1="2532" x2="480" y2="2532" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="2564" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="56" y="2590" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Defense in depth</text>
+<line x1="272" y1="2584" x2="480" y2="2584" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="40" y="2720" width="280" height="64" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<rect x="52" y="2740" width="28" height="24" rx="4" fill="#F4F6F8" stroke="#F4F6F8" stroke-width="0"/>
+<text x="66" y="2758" fill="#11161D" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" font-weight="500" text-anchor="middle">09</text>
+<text x="92" y="2760" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="start">Production surface</text>
+<line x1="320" y1="2752" x2="480" y2="2752" stroke="#11161D" stroke-width="1.5"/>
+<rect x="688" y="2652" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2678" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Context and MCP</text>
+<line x1="688" y1="2672" x2="480" y2="2672" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2704" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2730" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Production evals</text>
+<line x1="688" y1="2724" x2="480" y2="2724" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2756" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2782" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Conversation memory</text>
+<line x1="688" y1="2776" x2="480" y2="2776" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="688" y="2808" width="232" height="40" rx="8" fill="#FFFFFF" stroke="#D5DBE1" stroke-width="1"/>
+<text x="704" y="2834" fill="#11161D" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Cloud platforms</text>
+<line x1="688" y1="2828" x2="480" y2="2828" stroke="#5A6672" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="480" y1="280" x2="480" y2="2752" stroke="#11161D" stroke-width="2"/>
+<rect x="40" y="2896" width="12" height="12" rx="2" fill="#FF3621" stroke="#FF3621" stroke-width="0"/>
+<text x="60" y="2907" fill="#5A6672" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Accent hub is the sitting most people skip or start too late.</text>
+<text x="40" y="2932" fill="#5A6672" font-family="'Geist', system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start">Accent is RAG. Fine-tune for behavior you cannot retrieve. Agents last.</text></svg>
+</body>
+</html>

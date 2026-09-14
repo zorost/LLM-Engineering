@@ -1,0 +1,56 @@
+# LLM Engineering
+
+> Free LLM course and LLM roadmap from Zorost Intelligence AI Lab (Training 02).
+
+The canonical human document is README.md.
+Start here: START-HERE.md
+
+This course covers large language models: LLM fundamentals, the LLM scientist
+(architecture, pre-training, fine-tuning, alignment, evaluation, quantization),
+the LLM engineer (RAG, agents, inference, deployment, security), the LLM
+operator (serving, cost, observability), and the LLM leader (buy vs build,
+governance).
+
+## Tracks
+
+- tracks/00-fundamentals/README.md
+- tracks/01-scientist/README.md
+- tracks/02-engineer/README.md
+- tracks/03-operator/README.md
+- tracks/04-leader/README.md
+
+## Roadmaps
+
+- img/roadmap_fundamentals.png
+- img/roadmap_scientist.png
+- img/roadmap_engineer.png
+- img/roadmap_operator.png
+- img/roadmap_leader.png
+- docs/ROADMAPS.md
+
+## Labs
+
+- notebooks/README.md (20 CPU-first notebooks, no API key)
+
+## Reference
+
+- reference/GLOSSARY.md
+- reference/YOUTUBE.md
+- reference/COURSES.md
+- reference/BOOKS.md
+- reference/PAPERS.md
+- reference/TOOLS.md
+- docs/ASSESSMENT.md
+- docs/STUDY-PLANS.md
+
+## Companions
+
+- https://github.com/zorost/AI-Engineering-Lab
+- https://github.com/zorost/transformer-explainer
+- https://github.com/zorost/30-days-of-Databricks
+- https://zorost.com/ai-lab
+- https://www.amazon.com/dp/B0HHTJHK5R
+- https://www.amazon.com/dp/B0HHZM4QQS
+
+License: MIT
+Contact: info@zorost.com

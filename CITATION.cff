@@ -18,12 +18,17 @@ abstract: >-
   and CPU-first labs. Developed by Zorost Intelligence AI Lab.
 keywords:
   - large language models
+  - LLM course
+  - LLM roadmap
   - LLM engineering
   - fine-tuning
   - retrieval augmented generation
+  - RAG
   - agents
   - evaluation
   - quantization
+  - prompt engineering
+  - transformers
 preferred-citation:
   type: generic
   title: "LLM Engineering"

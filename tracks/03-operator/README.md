@@ -5,6 +5,13 @@ The engineer ships a product. Someone still has to keep a model answering
 under a latency budget, on a GPU bill that does not surprise finance, with
 logs that a lawyer can defend.
 
+<p align="center">
+  <img src="../../img/roadmap_operator.png" alt="LLM operator roadmap: serving engines, reliability, cost and capacity, observability" width="720">
+</p>
+
+The lava hub is **cost**. Tokens, KV RAM, and batch size are the same
+conversation.
+
 If you run a gateway, a GPU box, or an OpenAI-compatible endpoint for other
 teams, start here. If you only call a vendor API, still read O2 and O3:
 timeouts and token economics do not care who owns the weights.
@@ -15,6 +22,15 @@ timeouts and token economics do not care who owns the weights.
 | O2 | [Reliability](02-reliability.md) | 15 against a local runtime if you have one |
 | O3 | [Cost and capacity](03-cost-and-capacity.md) | 13, 19 |
 | O4 | [Observability](04-observability.md) | 12, then re-read E10 |
+
+## Leaves on the poster
+
+| Hub | Leaves | Module |
+|---|---|---|
+| 01 Serving engines | vLLM, SGLang, llama.cpp, TensorRT-LLM, OpenAI-compatible | O1 |
+| 02 Reliability | Timeouts, fallbacks, canary, load shed, retries | O2 |
+| 03 Cost and capacity | Token economics, KV RAM, batch size, scaling laws, headroom | O3 |
+| 04 Observability | Traces, token logs, online evals, incidents, SLOs | O4 |
 
 When O3 is easy, you can talk to a leader about budget without guessing.
 When O4 is easy, an incident has a trace instead of a Slack anecdote.

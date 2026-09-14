@@ -69,6 +69,17 @@ You need:
 companion. [StatQuest statistics](https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9)
 is the spoken one.
 
+### Information theory
+
+A token is a symbol from a finite alphabet. Cross-entropy is how many
+bits the model spent being surprised by the next symbol. Perplexity is
+that surprise, exponentiated, so people can pretend it is a branching
+factor. You do not need Shannon's proofs. You do need to stop treating
+"loss went down" as a story and start treating it as bits on a sequence.
+
+Fertility (tokens per word) is F5. Dataset contamination is S11. Both
+are information problems wearing product clothes.
+
 ## The gap most roadmaps leave
 
 They list "linear algebra, calculus, probability" and move on. The

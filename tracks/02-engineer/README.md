@@ -6,6 +6,15 @@ Scientist is how weights are made. Engineer is how an application
 calls those weights, grounds them, measures them, and puts them behind
 a contract.
 
+<p align="center">
+  <img src="../../img/roadmap_engineer.png" alt="LLM engineer roadmap: running LLMs, RAG, agents, inference, deployment, security, production surface" width="720">
+</p>
+
+Nine hubs. Hub 03 (RAG) is the lava sitting: fine-tune for behavior you
+cannot retrieve; agents last. Hub 09 is the production surface public
+engineer posters usually leave as a caption: context and MCP, production
+evals, memory, platforms.
+
 ![Engineer stack: user, application, retrieval, model runtime, traces](../../assets/diagrams/engineer-stack.png)
 
 Do not start at agents. If you cannot yet explain a token, a context
@@ -26,6 +35,20 @@ and [S1 Architecture](../01-scientist/01-architecture.md). Then return.
 | E10 | [Evals in production](10-production-evals.md) | 12 |
 | E11 | [Memory and conversation](11-memory.md) | 08 |
 | E12 | [Platforms](12-platforms.md) | 15; Training 01 weeks 18 to 24 |
+
+## Leaves on the poster
+
+| Hub | Leaves | Module |
+|---|---|---|
+| 01 Running LLMs | Hosted APIs, llama.cpp, vLLM/SGLang, Ollama, chat templates, local vs hosted | E1 |
+| 02 Vector storage | Embeddings, ANN indexes, chunking, metadata filters, hybrid search | E2 |
+| 03 Retrieval (RAG) | Index, retrieve, augment, generate, citations, when not to RAG | E3 |
+| 04 Advanced RAG | Query rewrite, rerankers, graph RAG, agentic RAG, RAG evals | E4 |
+| 05 Agents | ReAct, tools, planner, multi-agent, memory, guards | E5 |
+| 06 Inference | Batching, KV cache, speculative, quantized serve, prefix cache | E6 |
+| 07 Deployment | OpenAI-compatible, containers, autoscaling, gateways, SLOs | E7 |
+| 08 Security | Prompt injection, data leaks, supply chain, red team, defense in depth | E8 |
+| 09 Production surface | Context and MCP, production evals, conversation memory, cloud platforms | E9 to E12 |
 
 ## Default path
 

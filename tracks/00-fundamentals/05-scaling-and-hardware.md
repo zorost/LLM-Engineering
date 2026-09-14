@@ -44,6 +44,31 @@ You need working numbers, not a vendor SKU list:
 Unified memory on Apple silicon (MLX, llama.cpp) changes the shopping
 list. It does not repeal the math.
 
+### KV cache RAM
+
+Decode reuses keys and values already computed for the prompt. That reuse
+is the KV cache. It is why the second token is cheaper than the first
+(lab 18) and why long context is a memory product, not a marketing
+window. Grouped-query attention (GQA) exists to shrink that cache. If
+you cannot estimate KV bytes for batch × layers × heads × seq × dtype,
+you will OOM a "small" 8B model at 32k context and blame the engine.
+
+### Mixture of experts
+
+MoE routes each token to a few expert MLPs instead of one dense FFN.
+Parameter count goes up. Active FLOPs per token stay closer to a smaller
+dense model. Routing, load balance, and expert parallelism are S1 and
+lab 17. The hardware point here: **you buy for active compute and for
+the experts you must keep in RAM**, which are different numbers. A
+sparse 47B that fits in VRAM can still miss latency if routing is messy.
+
+### Token cost
+
+Bills, rate limits, and evals are counted in tokens. Fertility (tokens
+per word) is why non-English and code blow a budget that looked fine in
+English. Prefill is usually cheaper per token than decode on a hosted
+API. Batching changes both. Lab 13 is the worksheet. O3 is the job.
+
 ## The gap most roadmaps leave
 
 They jump to "run Llama in Colab" with no budget. Then the engineer

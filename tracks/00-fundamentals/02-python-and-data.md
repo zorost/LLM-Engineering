@@ -31,6 +31,28 @@ video are enough for syntax.
 Jake VanderPlas, [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/),
 is the free book.
 
+### PyTorch
+
+PyTorch is the tensor library the labs and most open training stacks use.
+You need `Tensor` shapes, `requires_grad`, a tiny `nn.Module`, a
+`DataLoader`, and the habit of printing `x.shape` before you debug a
+loss. You do not need to memorize every op. Device placement (`cpu` vs
+`cuda` vs `mps`) is F5. Autograd is F3.
+
+The [official 60-minute blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
+is enough to start. Patrick Loeber's playlist is the spoken version.
+
+### Hugging Face
+
+`transformers`, `datasets`, and `tokenizers` are how you load a public
+checkpoint without writing a file format parser. A model id on the Hub
+is not a license to ship it. Read the card (S11). A `pipeline()` is a
+demo. A `AutoTokenizer` plus an explicit `chat_template` is engineering
+(E1, lab 04).
+
+Do not start this course by fine-tuning with a one-click Trainer script.
+Load a tokenizer, encode ten strings, and print the special tokens first.
+
 ### The split is the product
 
 Before any model:
